@@ -1,0 +1,2291 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name=”viewport” content=”width=device-width, initial-scale=1">
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- fonts -->
+    <link href="http://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet" />
+    <link
+      href="http://fonts.cdnfonts.com/css/helvetica-neue-9"
+      rel="stylesheet"
+    />
+
+    <title>PLAYBOY | MAYARI</title>
+
+    <link rel="icon" href="./img/logo_icon.svg" type="image/x-icon" />
+
+    <style>
+      body {
+        font-family: "Futura Std", "Helvetica Neue", sans-serif;
+        padding-top: 130px;
+        background-color: white;
+      }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      /* navbar start */
+      .l_txt:hover {
+        cursor: pointer;
+        color: grey;
+      }
+
+      .l_txt {
+        font-size: 13px;
+      }
+
+      label {
+        color: black;
+      }
+
+      .dropbtn {
+        background-color: transparent;
+        color: black;
+        font-size: 13px;
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        text-align: left;
+        position: absolute;
+        font-size: 12px;
+        background-color: #f1f1f1;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        color: grey;
+      }
+      /* navbar end */
+
+      /* page footer start */
+      .ftr_txt {
+        color: #737373;
+        font-size: 12px;
+      }
+
+      .ftr_mtxt {
+        margin-bottom: 10px;
+      }
+
+      .ftr_txt:hover {
+        color: black;
+      }
+
+      .ftr_cntry {
+        color: #737373;
+        font-size: 12px;
+      }
+
+      .ftr_cntry:hover {
+        cursor: pointer;
+        color: black;
+      }
+      /* page footer end */
+
+      /* product items_ product filters start*/
+      .ctg_flter {
+        list-style: none;
+        padding-left: 0px;
+        font-size: 12px;
+        margin-bottom: 5px;
+        color: black;
+      }
+
+      .ctg_flter:hover {
+        cursor: pointer;
+        color: grey;
+      }
+
+      .chckbx {
+        padding-bottom: 2px;
+      }
+
+      .fa-star,
+      .fa-star-half {
+        color: #ffbc1b;
+        font-size: 12px;
+      }
+
+      .greyed-star {
+        color: grey;
+      }
+
+      .apply_btn {
+        width: 100%;
+        height: 35px;
+        background-color: black;
+        border-radius: 5px;
+        border: none;
+        color: white;
+      }
+
+      .mm_range {
+        font-size: 12px;
+      }
+      /* product items_ product filters end */
+
+      /* product items_ product nav start */
+      .prc_drpbtn,
+      .ctg_txt {
+        color: black;
+        width: 150px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .prd_cntnt-bg {
+        background-color: #ededed;
+        border-radius: 5px;
+      }
+
+      .ctg_txt:hover {
+        color: gray;
+      }
+      /* product items_ product nav end */
+
+      /* product items_ product contents start */
+
+      .prd_title {
+        font-size: 14px;
+      }
+
+      .solid_promo {
+        background-color: darkblue;
+        font-size: 11px;
+        color: white;
+      }
+
+      .border_promo {
+        border: 1px solid #ee4d2d;
+        font-size: 11px;
+        color: #ee4d2d;
+      }
+
+      .border_whlsale-promo {
+        border: 1px solid #44b5ff;
+        font-size: 11px;
+        color: #44b5ff;
+      }
+
+      .prd_price {
+        font-size: 14px;
+        color: #ee4d2d;
+      }
+
+      .prd_rating-star {
+        font-size: 3px;
+      }
+
+      .prd_rating,
+      .prd_city {
+        font-size: 12px;
+      }
+      /* product items_ product contents end */
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div class="container-fluid fixed-top bg-light">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-6">
+            <a href="#">
+              <label class="ms-1 me-1 l_txt fw-light">Seller Centre </label></a
+            >
+            <span style="font-size: 14px; color: black">|</span>
+            <a href="#">
+              <label class="mx-1 l_txt fw-light">Sell on Mayari </label></a
+            >
+            <span style="font-size: 14px; color: black">|</span>
+            <div class="dropdown">
+              <button class="dropbtn fw-light">Download</button>
+              <div class="dropdown-content">
+                <img src="./img/qr.png" />
+                <img
+                  class="m-1 p-1 ps-2"
+                  src="./img/appstore.png"
+                  height="25"
+                />
+                <img
+                  class="m-1 p-1 ps-2"
+                  src="./img/googleplay.png"
+                  height="25"
+                />
+                <img class="m-2 ps-5" src="./img/appgallery.png" height="16" />
+              </div>
+            </div>
+            <span style="font-size: 14px; color: black">|</span>
+            <label class="mx-1 l_txt fw-light">
+              Follow us on
+              <a href="#"
+                ><i style="color: black" class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#"
+                ><i style="color: black" class="fa-brands fa-instagram"></i
+              ></a>
+            </label>
+          </div>
+
+          <div class="col-6 text-end">
+            <a href="#">
+              <label class="ms-1 l_txt fw-light"
+                ><i class="fa-solid fa-bell"></i> Notifications</label
+              ></a
+            >
+            <a href="#">
+              <label class="mx-1 l_txt fw-light"
+                ><i class="fa-solid fa-circle-question"></i> Help</label
+              ></a
+            >
+            <div class="dropdown">
+              <button class="dropbtn">
+                <i class="fa-solid fa-earth-asia"></i> English
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="dropdown-content" style="right: 0">
+                <a href="#">English</a>
+                <a href="#">Tagalog</a>
+              </div>
+            </div>
+            <a href="#">
+              <label class="mx-1 l_txt fw-bold">Sign Up</label></a
+            >
+            <span style="font-size: 14px; color: black">|</span>
+            <a href="#">
+              <label class="mx-1 l_txt fw-bold">Login</label></a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-2 flex-m-auto mt-4"
+          >
+            <a class="navbar-brand ms-3" href="index.html">
+              <img src="./img/logo.svg" height="30" />
+            </a>
+          </div>
+          <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6">
+            <form
+              class="d-flex w-100 border border-1 border-dark rounded-2 mt-3 mb-0"
+              role="search"
+            >
+              <input
+                class="form-control border border-0 m-1"
+                type="search"
+                placeholder="Search..."
+              /><a href="penshoppe.html">
+                <button class="btn btn-light px-4 bg-dark m-1" type="button">
+                  <i style="color: white" class="fa-solid fa-magnifying-glass"></i
+                  >
+                </a></button>
+            </form>
+          </div>
+          <div class="col m-auto mt-4">
+            <a href="#">
+              <i
+                style="color: black"
+                height:200;
+                class="fa-solid fa-cart-shopping pe-3 my-2"
+              ></i>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3"></div>
+          <div class="col">
+            <a href="#">
+              <label class="ms-1 me-1 l_txt fw-light">Android</label></a
+            >
+            <a href="#">
+              <label class="mx-1 l_txt fw-light">Iphone</label></a
+            >
+            <a href="mensapparel.html">
+              <label class="mx-1 l_txt fw-light">Men's</label></a
+            >
+            <a href="#">
+              <label class="mx-1 l_txt fw-light">Tablets</label></a
+            >
+            <a href="#">
+              <label class="mx-1 l_txt fw-light">Bag</label></a
+            >
+            <a href="#">
+              <label class="mx-1 l_txt fw-light">Computer</label></a
+            >
+            <a href="#">
+              <label class="mx-1 l_txt fw-light">Keyboard</label></a
+            >
+          </div>
+          <div class="col-xl-5 col-lg-3 col-md-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- product items -->
+    <div class="container-fluid mt-2 pt-1">
+      <div class="container bg-light">
+        <div class="container pt-1">
+          <div class="row mt-3 pb-5 justify-content-evenly">
+            <!-- product filters -->
+            <div class="col-2">
+              <div class="row pt-2 mx-1">
+                <div class="row ps-1 pb-3">
+                  <label class="text-left mt-2 fw-bold">
+                    <i
+                      class="fa-solid fa-list mx-1 me-2"
+                      style="font-size: 14px"
+                    ></i
+                    ><span> All Categories</span>
+                  </label>
+                </div>
+
+                <hr />
+
+                <div class="row px-3 pb-3 mt-2">
+                  <a href="#"><p class="ctg_flter">Tops</p></a>
+                  <a href="#"><p class="ctg_flter">Shorts</p></a>
+                  <a href="#"><p class="ctg_flter">Pants</p></a>
+                  <a href="#"><p class="ctg_flter">Jeans</p></a>
+                  <a href="#"><p class="ctg_flter">Suit</p></a>
+                  <a href="#"><p class="ctg_flter">Costumes</p></a>
+                </div>
+
+                <div class="row ps-1 pb-1">
+                  <label class="text-left mt-2 fw-bold">
+                    <i
+                      class="fa-solid fa-filter mx-1 me-2"
+                      style="font-size: 14px"
+                    ></i
+                    ><span>SEARCH FILTER</span>
+                  </label>
+                </div>
+
+                <div class="row ps-2 pb-3 ctg_flter text-left">
+                  <label
+                    class="text-left mt-3 fw-bold ms-1 mb-1"
+                    style="font-size: 13px"
+                  >
+                    <span>By Category</span>
+                  </label>
+
+                  <div class="list-group">
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1
+                      sytle="padding-bottom:12px;"" />
+                      <span>T-Shirts (5M+)</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Shorts (898K+)</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Shirts (865K+)</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Pants (825K+)</span>
+                    </label>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="row ps-1">
+                  <label class="text-left mt-2 fw-bold"> Rating </label>
+                </div>
+
+                <div class="row ps-3 pb-4 mt-1">
+                  <!-- five star -->
+                  <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+
+                  <!-- four star-->
+                  <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <span class="ctg_flter"> & Up</span>
+                  </div>
+
+                  <!-- three star -->
+                  <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <span class="ctg_flter"> & Up</span>
+                  </div>
+
+                  <!-- two star -->
+                  <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <span class="ctg_flter"> & Up</span>
+                  </div>
+
+                  <!-- one star -->
+                  <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <i class="fa-solid fa-star greyed-star"></i>
+                    <span class="ctg_flter"> & Up</span>
+                  </div>
+                </div>
+
+                <hr />
+                <div class="row ps-1 pb-3">
+                  <label class="text-left mt-2 fw-bold"> Price Range </label>
+                </div>
+
+                <div class="container-fluid pb-4 mt-1 mb-2">
+                  <div class="row justify-content-between">
+                    <div class="col px-1">
+                      <input
+                        type="tel"
+                        class="form-control mm_range"
+                        placeholder="₱ - Min"
+                        minlength="1"
+                        maxlength="10"
+                      />
+                    </div>
+                    _
+                    <div class="col px-1">
+                      <input
+                        type="tel"
+                        class="form-control mm_range"
+                        placeholder="₱ - Max"
+                        minlength="1"
+                        maxlength="10"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row mt-2 px-1">
+                    <button class="apply_btn" type="button">Apply</button>
+                  </div>
+                </div>
+
+                <hr />
+
+                <div class="row ps-1 pb-2">
+                  <label class="text-left mt-2 fw-bold"> Shipped From </label>
+                </div>
+
+                <div class="row ps-0 pb-3 ctg_flter text-left">
+                  <div class="list-group">
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1
+                      sytle="padding-bottom:12px;"" />
+                      <span>Domestic</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Overseas</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Metro Manila</span>
+                    </label>
+                  </div>
+                </div>
+
+                <hr />
+
+                <div class="row ps-1 pb-2">
+                  <label class="text-left mt-2 fw-bold"> Shipped Type </label>
+                </div>
+
+                <div class="row ps-0 pb-3 ctg_flter text-left">
+                  <div class="list-group">
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1
+                      sytle="padding-bottom:12px;"" />
+                      <span>Mayari Mall</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Preferred Seller</span>
+                    </label>
+                  </div>
+                </div>
+
+                <hr />
+
+                <div class="row ps-1 pb-2">
+                  <label class="text-left mt-2 fw-bold">
+                    Shipping Option
+                  </label>
+                </div>
+
+                <div class="row ps-0 pb-3 ctg_flter text-left">
+                  <div class="list-group">
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1
+                      sytle="padding-bottom:12px;"" />
+                      <span>Standard Delivery</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Economy Delivery</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>J&T Express</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Ninja Van</span>
+                    </label>
+                  </div>
+                </div>
+
+                <hr />
+
+                <div class="row ps-1 pb-2">
+                  <label class="text-left mt-2 fw-bold"> Brand </label>
+                </div>
+
+                <div class="row ps-0 pb-3 ctg_flter text-left">
+                  <div class="list-group">
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1
+                      sytle="padding-bottom:12px;"" />
+                      <span>Oxgn</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Bench</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Polo Club</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Penshoppe</span>
+                    </label>
+                  </div>
+                </div>
+
+                <hr />
+
+                <div class="row ps-1 pb-2">
+                  <label class="text-left mt-2 fw-bold">
+                    Service & Promotion
+                  </label>
+                </div>
+
+                <div class="row ps-0 pb-3 ctg_flter text-left">
+                  <div class="list-group">
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1
+                      sytle="padding-bottom:12px;"" />
+                      <span>With Video</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Shipping Discount</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>Ready Stock</span>
+                    </label>
+                    <label class="list-group-item border-0 chckbx">
+                      <input type="checkbox" class="form-check-input me-1" />
+                      <span>With Discount</span>
+                    </label>
+                  </div>
+                </div>
+
+                <hr />
+                <div class="col mt-2 px-1 pb-3">
+                  <button class="apply_btn" type="button">CLEAR ALL</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- product contents -->
+            <div class="col-10">
+              <!-- nav contents -->
+              <div class="row prd_cntnt-bg">
+                <div class="col-10">
+                  <label class="text-left mt-2 fw-bold text-muted">
+                    Sort by
+                  </label>
+                  <a class="p-1 m-2 ctg_txt" href="#!">Popular</a>
+                  <a class="p-1 m-2 ctg_txt" href="#!">Latest</a>
+                  <a class="p-1 m-2 ctg_txt" href="#!">Top Sales</a>
+
+                  <div class="dropdown prc_drpbtn m-2 py-2 bg-light">
+                    <button class="dropbtn ms-2">
+                      Prices
+                      <i class="fa-solid fa-chevron-down ps-5 ms-3"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Price: Low to High</a>
+                      <a href="#">Price: High to Low</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- all contents -->
+
+              <!-- content container -->
+              <div class="py-3">
+                <!-- row 1 -->
+                <div class="row pb-3 justify-content-between">
+                  <!-- content 1 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_1.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/249.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Color Men's Short-Sleeved T-Shirt polo Shirt
+                            Round Neck Slim-Fit
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱2 off</p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 enjoy ₱20 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱299
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱209</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star pe-1"></i>
+                          <span class="prd_rating">26.5K sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Parañaque City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 2 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_2.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/lowest_guarantee.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Cotton Short-Sleeved T-Shirt polo Shirt
+                            Round Neck Loose Shirt
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row pb-3">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 5 enjoy ₱20 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱499
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱349</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">2.3K sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted">Taytay, Rizal</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 3 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_3.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Round Neck Short Sleeve Fashion T-shirt
+                            Summer Breathable Sports Casual Shirt
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱50 off</p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 at ₱999</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1 pb-3">
+                            <span>₱209</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">39 sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Pasay City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 4 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_4.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Round Neck Short Sleeve Fashion T-shirt
+                            Feather Black Cotton Shirt
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱140 off</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱999
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱799</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">7.5K sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Quezon City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="row pb-2 justify-content-between">
+                  <!-- content 5 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_5.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Print Men's T-Shirt polo Shirt Round Neck
+                            Slim-Fit Shirt (Black)
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row py-1 mb-2">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱499
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱349</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">100 sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Navotas City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 6 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_6.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/10percent.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Cotton Short-Sleeved T-Shirt Polo Shirt
+                            Round Neck Loose Shirt (Black)
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱20 off</p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 enjoy ₱100 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1 pb-3">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1">
+                            <span>₱249</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star pe-1"></i>
+                          <span class="prd_rating">5.5K sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Quezon City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 7 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_7.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Pop Cotton Teen T-Shirt Polo Shirt Round
+                            Neck Slim-fit Shirt
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱140 off</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1 pb-3">
+                            <span>₱989 - ₱999</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">372 sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Quezon City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 8 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_8.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Polo Shirt Round Neck Fashion Summer
+                            Breathable
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱250 off</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1 pb-3">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1">
+                            <span>₱1399</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">1K sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Quezon City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- row 3 -->
+                <div class="row pb-2 justify-content-between">
+                  <!-- content 9 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_9.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY T-Shirt Shirt Round Neck Loose Shirt Summer
+                            Breathable (Yellow)
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱10 off</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱159
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱149</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">2.6K sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted">Baguio City, Benguet</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 10 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_10.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/249.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY T-Shirt Printed White Shirt Round Neck Loose
+                            Shirt Summer Breathable
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">40% off</p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 enjoy ₱100 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱329
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱199</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star pe-1"></i>
+                          <span class="prd_rating">26.5K sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Caloocan City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 11 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_11.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/lowest_guarantee.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY x Beemo Printed White Shirt Long Sleeve
+                            Loose Shirt (Brown)
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row pb-3">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 enjoy ₱200 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱500
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱250</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">1.3K sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted">binondo, Metro Manila</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 12 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_12.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Long Sleeve Shirt Breathable Slim-Fit Nylon
+                            Stitch Lorem (Black)
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱50 off</p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 at ₱999</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1 pb-3">
+                            <span>₱499</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">39 sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Pasay City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- row 4 -->
+                <div class="row pb-2 justify-content-between">
+                  <!-- content 13 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_13.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/10percent.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Aliquam Ultrices Sagittis Orci a Scelerisque
+                            Purus Semper Eget Duis
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱10 off</p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 enjoy ₱50 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1 pb-3">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1">
+                            <span>₱299</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star pe-1"></i>
+                          <span class="prd_rating">547 sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Taguig City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 14 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_14.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Pharetra Et Ultrices Neque Ornare Aenean
+                            Euismod Elementum Nisi Quis
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱50 off</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱599
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱499</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">1.2K sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted">Bacoor, Cavite</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 15 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_15.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/249.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Lacinia Quis Vel Eros Donec Ac Odio Tempor
+                            Orci Dapibus
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex pb-3">
+                          <div class="flex-grow-1">
+                            <span class="border_whlsale-promo px-1 me-4"
+                              >wholesale</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱599
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱249</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star pe-1"></i>
+                          <span class="prd_rating">1.7K sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Makati City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 16 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_16.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Duis Ut Diam Quam Nulla Porttitor Massa Id
+                            Neque Aliquam
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row py-2">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱499
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱349</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">100 sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Navotas City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- row 5 -->
+                <div class="row pb-2 justify-content-between">
+                  <!-- content 17 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_17.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/lowest_guarantee.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Arcu Cursus Vitae Congue Mauris Rhoncus
+                            Aenean Vel Elit Scelerisque
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row pb-3">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 enjoy ₱20 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱1200
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱999</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star pe-1"></i>
+                          <span class="prd_rating">4K sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted">Cainta, Rizal</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 18 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_18.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/10percent.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY Amet Consectetur Adipiscing Elit Duis
+                            Tristique Sollicitudin Nibh Sit Amet
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱50 off</p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 enjoy ₱100 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1 pb-3">
+                        <div class="container d-flex">
+                          <div class="flex-grow-1">
+                            <span>₱499</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star pe-1"></i>
+                          <span class="prd_rating">3.3K sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Las Piñas City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 19 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_19.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <img
+                      src="./img/249.png"
+                      style="height: 15rem; position: absolute; z-index: 1"
+                    />
+
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY In Nibh Mauris Cursus Mattis Molestie A
+                            Iaculis At Erat
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱2 off</p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="border_promo px-1 me-4"
+                              >Any 2 enjoy ₱20 off</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱700
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱599</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star pe-1"></i>
+                          <span class="prd_rating">2.7K sold</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Parañaque City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- content 20 -->
+                  <div class="card py-2 col-3" style="width: 16rem">
+                    <img
+                      src="./img/plyboy_20.jpg"
+                      class="card-img-top"
+                      style="height: 15rem"
+                    />
+                    <div class="card-body">
+                      <div class="row prd_title px-1">
+                        <div class="container-fluid">
+                          <p>
+                            PLAYBOY In Eu Mi Bibendum Neque Egestas Congue
+                            Quisque Egestas Diam
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="solid_promo px-1 ms-1">₱10 off</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_price px-1">
+                        <div class="container d-flex">
+                          <div class="pe-2">
+                            <p class="text-muted text-decoration-line-through">
+                              ₱199
+                            </p>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span>₱149</span>
+                          </div>
+                          <div class="text-align-end">
+                            <img
+                              src="./img/free_ship_icon.png"
+                              height="16px"
+                              width="22px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row prd_rating-star pe-4 pb-2">
+                        <div class="container">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star greyed-star pe-1"></i>
+                          <span class="prd_rating">231 sold/month</span>
+                        </div>
+                      </div>
+
+                      <div class="row prd_city">
+                        <div class="col">
+                          <span class="text-muted"
+                            >Quezon City, Metro Manila</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- content container end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- page footer -->
+    <div class="container-fluid mt-4 pt-3">
+      <div class="container bg-white">
+        <div class="container pt-1">
+          <div class="row mt-4 pt-4 pb-3 justify-content-evenly">
+            <div class="row mt-2">
+              <div class="col text-left">
+                <label class="fw-bold fs-6 pb-4" style="color: #737373"
+                  >CUSTOMER SERVICE</label
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Help Centre</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Payment Methods</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Mayari Pay</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Mayari Coins</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Order Tracking</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Free Shipping</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Return & Refund</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Mayari Guarantee</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Overseas Product</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Contact Us</p></a
+                >
+              </div>
+              <div class="col text-left">
+                <label class="fw-bold fs-6 pb-4" style="color: #737373"
+                  >ABOUT MAYARI</label
+                >
+                <a class="ftr_txt" href="#"><p class="ftr_mtxt">About Us</p></a>
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Mayari Blog</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Mayari Careers</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Mayari Policies</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Privacy Policy</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Mayari Mall</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Seller Centre</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Flash Deals</p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">Media Contact</p></a
+                >
+              </div>
+              <div class="col-3 mx-4 text-left">
+                <div class="row">
+                  <label class="fw-bold fs-6 pb-2" style="color: #737373"
+                    >PAYMENT</label
+                  >
+                  <div class="row justify-content-evenly">
+                    <div class="col py-3">
+                      <img src="./img/mayari_pay.png" width="70" />
+                    </div>
+                    <div class="col py-1">
+                      <img src="./img/dragonpay-logo.png" width="70" />
+                    </div>
+                    <div class="col py-1">
+                      <img
+                        src="./img/Stripe_logo,_revised_2016.png"
+                        width="70"
+                      />
+                    </div>
+                  </div>
+                  <div class="row my-3 justify-content-evenly">
+                    <div class="col">
+                      <img
+                        src="./img/Mastercard-Logo-700x394.png"
+                        width="100%"
+                      />
+                    </div>
+                    <div class="col py-2">
+                      <img src="./img/visa.png" width="70" />
+                    </div>
+                    <div class="col">
+                      <img src="./img/Bpi.png" width="70" />
+                    </div>
+                  </div>
+                  <div class="row justify-content-evenly">
+                    <div class="col py-2">
+                      <img src="./img/paymaya.png" width="70" />
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <label class="fw-bold fs-6 pb-4" style="color: #737373"
+                    >LOGISTICS</label
+                  >
+                  <div class="row justify-content-evenly py-2">
+                    <div class="col pt-2">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/mayarixprs.png" width="70"
+                      /></a>
+                    </div>
+                    <div class="col py-1">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/gogox-logo.png" width="70"
+                      /></a>
+                    </div>
+                    <div class="col py-1">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/entrego-logo.png" width="70"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="row justify-content-evenly py-2">
+                    <div class="col py-2">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/ninjavan.png" width="70"
+                      /></a>
+                    </div>
+                    <div class="col py-2">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/jt-express-logo.png" width="70"
+                      /></a>
+                    </div>
+                    <div class="col">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/2GO.png" width="70"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="row justify-content-evenly py-2">
+                    <div class="col ms-2">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/xde.png" height="40"
+                      /></a>
+                    </div>
+                    <div class="col py-2">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/glash.png" width="70"
+                      /></a>
+                    </div>
+                    <div class="col py-2">
+                      <a class="ftr_txt" href="#"
+                        ><img src="./img/MLhuillier.png" width="70"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-left">
+                <label class="fw-bold fs-6 pb-4" style="color: #737373"
+                  >FOLLOW US</label
+                >
+                <a class="ftr_txt" href="#">
+                  <p class="ftr_mtxt">
+                    <i
+                      class="fa-brands fa-facebook me-2"
+                      style="font-size: 16px"
+                    ></i>
+                    Facebook
+                  </p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">
+                    <i
+                      class="fa-brands fa-instagram-square me-2"
+                      style="font-size: 16px"
+                    ></i>
+                    Instagram
+                  </p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">
+                    <i
+                      class="fa-brands fa-twitter-square me-2"
+                      style="font-size: 16px"
+                    ></i>
+                    Twitter
+                  </p></a
+                >
+                <a class="ftr_txt" href="#"
+                  ><p class="ftr_mtxt">
+                    <i
+                      class="fa-brands fa-linkedin me-2"
+                      style="font-size: 16px"
+                    ></i>
+                    LinkedIn
+                  </p></a
+                >
+              </div>
+              <div class="col text-left">
+                <label class="fw-bold fs-6 pb-4" style="color: #737373"
+                  >SHOPEE APP DOWNLOAD</label
+                >
+                <a class="ftr_txt" href="#">
+                  <div class="row">
+                    <div class="col">
+                      <img src="./img/qr.png" width="102" />
+                    </div>
+                    <div class="col py-1">
+                      <div class="row mb-1 pb-2">
+                        <img src="./img/appstore.png" height="100%" />
+                      </div>
+                      <div class="row my-2 py-1">
+                        <img src="./img/googleplay.png" height="100%" />
+                      </div>
+                      <div class="row mt-1 pt-2">
+                        <img src="./img/appgallery.png" height="100%" />
+                      </div>
+                    </div></div
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr style="border: 1px solid black" />
+      </div>
+    </div>
+
+    <!-- credit footer -->
+    <div class="container-fluid">
+      <div class="container bg-white">
+        <div class="container">
+          <div class="row pb-4 justify-content-evenly">
+            <div class="col-3 text-left mt-2">
+              <label class="fw-bold" style="font-size: 13px; color: #737373">
+                © 2022 Mayari. All Rights Reserved.
+              </label>
+            </div>
+            <div class="col-9 mt-1 ms-3">
+              <label style="font-size: 12px; color: #737373"
+                >Country & Region:</label
+              >
+              <a href="#"><label class="ftr_cntry">Singapore</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Indonesia</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Taiwan</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Thailand</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Malaysia</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Vietnam</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Philippines</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Brazil</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">México</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Colombia</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Chile</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Poland</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Spain</label></a>
+              <span style="font-size: 14px; color: #737373">|</span>
+              <a href="#"><label class="ftr_cntry">Argentina</label></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
