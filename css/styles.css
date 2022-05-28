@@ -11338,7 +11338,7 @@ html {
 /* * img border */
 
  .brder_img{
-   border: 5px solid #3CB389;
+   border: 2px solid #3CB389;
  }
 
 /* ! navbar */
@@ -11490,7 +11490,7 @@ html {
 }
 .contact-section .card {
   border: 0;
-  border-bottom: 0.35rem solid #64a19d;
+  border-bottom: 0.35rem solid #3CB389;;
 }
 .contact-section .eml_clr{
   color: rgba(0, 0, 0, 0.8);
